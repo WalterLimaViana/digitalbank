@@ -6,36 +6,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.TrasnferenciaService = void 0;
+exports.TransferenciaService = void 0;
 var core_1 = require("@angular/core");
-var TrasnferenciaService = /** @class */ (function () {
-    function TrasnferenciaService(httpClient) {
+var TransferenciaService = /** @class */ (function () {
+    function TransferenciaService(httpClient) {
         this.httpClient = httpClient;
         this.url = 'http://localhost:3000/transferencias';
         this.listaTransferencia = [];
     }
-    Object.defineProperty(TrasnferenciaService.prototype, "transferencias", {
+    Object.defineProperty(TransferenciaService.prototype, "transferencias", {
         get: function () {
             return this.listaTransferencia;
         },
         enumerable: false,
         configurable: true
     });
-    TrasnferenciaService.prototype.todas = function () {
+    TransferenciaService.prototype.todas = function () {
         return this.httpClient.get(this.url);
     };
-    TrasnferenciaService.prototype.adicionar = function (transferencia) {
+    TransferenciaService.prototype.adicionar = function (transferencia) {
         this.hidratar(transferencia);
         return this.httpClient.post(this.url, transferencia);
     };
-    TrasnferenciaService.prototype.hidratar = function (transferencia) {
+    TransferenciaService.prototype.hidratar = function (transferencia) {
         transferencia.data = new Date();
     };
-    TrasnferenciaService = __decorate([
+    TransferenciaService = __decorate([
         core_1.Injectable({
             providedIn: 'root'
         })
-    ], TrasnferenciaService);
-    return TrasnferenciaService;
+    ], TransferenciaService);
+    return TransferenciaService;
 }());
-exports.TrasnferenciaService = TrasnferenciaService;
+exports.TransferenciaService = TransferenciaService;

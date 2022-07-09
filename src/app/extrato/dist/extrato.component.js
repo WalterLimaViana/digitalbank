@@ -13,7 +13,11 @@ var ExtratoComponent = /** @class */ (function () {
         this.service = service;
     }
     ExtratoComponent.prototype.ngOnInit = function () {
-        this.transferencias = this.service.transferencias;
+        var _this = this;
+        this.service.todas().subscribe(function (transferencias) {
+            console.table(transferencias);
+            _this.transferencias = transferencias;
+        });
     };
     ExtratoComponent = __decorate([
         core_1.Component({

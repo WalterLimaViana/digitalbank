@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TrasnferenciaService } from './services/trasnferencia.service';
+import { TransferenciaService } from './services/transferencia.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { TrasnferenciaService } from './services/trasnferencia.service';
 export class AppComponent {
   title = 'digitalbank';
 
-  constructor(private service: TrasnferenciaService) {}
+  constructor(private service: TransferenciaService) {}
 
   transferir($event: any) {
     this.service.adicionar($event);

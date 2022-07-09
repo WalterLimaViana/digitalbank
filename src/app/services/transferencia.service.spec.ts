@@ -1,16 +1,16 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async, inject } from '@angular/core/testing';
-import { TrasnferenciaService } from './trasnferencia.service';
+import { TransferenciaService } from './transferencia.service';
 
 describe('Service: Trasnferencia', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [TrasnferenciaService]
+      providers: [TransferenciaService]
     });
   });
 
-  it('should ...', inject([TrasnferenciaService], (service: TrasnferenciaService) => {
+  it('should ...', inject([TransferenciaService], (service: TransferenciaService) => {
     expect(service).toBeTruthy();
   }));
 });
