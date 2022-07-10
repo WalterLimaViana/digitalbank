@@ -23,8 +23,7 @@ var NovatransferenciaComponent = /** @class */ (function () {
         this.service.adicionar(valorEmitir).subscribe(function (resultado) {
             console.log(resultado);
             _this.limparCampos();
-        });
-        this.limparCampos();
+        }, function (error) { return console.error(error); });
     };
     NovatransferenciaComponent.prototype.limparCampos = function () {
         this.valor = 0;

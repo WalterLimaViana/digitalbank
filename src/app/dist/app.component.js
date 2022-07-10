@@ -13,9 +13,6 @@ var AppComponent = /** @class */ (function () {
         this.service = service;
         this.title = 'digitalbank';
     }
-    AppComponent.prototype.transferir = function ($event) {
-        this.service.adicionar($event);
-    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'app-root',

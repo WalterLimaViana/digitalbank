@@ -21,11 +21,13 @@ export class NovatransferenciaComponent {
       valor: this.valor,
       destino: this.destino,
     };
-    this.service.adicionar(valorEmitir).subscribe((resultado) => {
-      console.log(resultado);
-      this.limparCampos();
-    });
-    this.limparCampos();
+    this.service.adicionar(valorEmitir).subscribe(
+      (resultado) => {
+        console.log(resultado);
+        this.limparCampos();
+      },
+      (error) => console.error(error)
+    );
   }
 
   limparCampos() {

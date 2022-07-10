@@ -10,8 +10,4 @@ export class AppComponent {
   title = 'digitalbank';
 
   constructor(private service: TransferenciaService) {}
-
-  transferir($event: any) {
-    this.service.adicionar($event);
-  }
 }
