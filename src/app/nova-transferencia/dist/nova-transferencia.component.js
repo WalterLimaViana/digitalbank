@@ -9,7 +9,7 @@ exports.__esModule = true;
 exports.NovatransferenciaComponent = void 0;
 var core_1 = require("@angular/core");
 var NovatransferenciaComponent = /** @class */ (function () {
-    function NovatransferenciaComponent(service) {
+    function NovatransferenciaComponent(service, router) {
         this.service = service;
         this.aoTransferir = new core_1.EventEmitter();
     }
@@ -23,6 +23,7 @@ var NovatransferenciaComponent = /** @class */ (function () {
         this.service.adicionar(valorEmitir).subscribe(function (resultado) {
             console.log(resultado);
             _this.limparCampos();
+            _this.router.navigateByUrl('extrato');
         }, function (error) { return console.error(error); });
     };
     NovatransferenciaComponent.prototype.limparCampos = function () {

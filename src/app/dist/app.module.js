@@ -16,6 +16,7 @@ var extrato_component_1 = require("./extrato/extrato.component");
 var common_1 = require("@angular/common");
 var pt_1 = require("@angular/common/locales/pt");
 var http_1 = require("@angular/common/http");
+var app_routing_module_1 = require("./app-routing.module");
 common_1.registerLocaleData(pt_1["default"], 'pt');
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -23,7 +24,7 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         core_1.NgModule({
             declarations: [app_component_1.AppComponent, nova_transferencia_component_1.NovatransferenciaComponent, extrato_component_1.ExtratoComponent],
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpClientModule],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpClientModule, app_routing_module_1.AppRoutingModule],
             providers: [
                 { provide: core_1.LOCALE_ID, useValue: 'pt' },
                 { provide: core_1.DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
